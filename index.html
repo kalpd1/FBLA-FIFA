@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Full Time (Copy)</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/museum.css">
+    <a class="skip" href="#hall">Skip to content</a>
+
+  <header class="bar" id="bar">
+    <a class="mark" href="#globe" aria-label="Full Time. On the globe, goes back to the start">
+      <span class="mark-ball" aria-hidden="true"></span>
+      <span>Full Time</span>
+    </a>
+    <nav class="crumbs" id="crumbs" aria-label="Where you are"></nav>
+  </header>
+
+  <!-- Room 1: the globe -->
+  <section class="scene scene-globe" id="scene-globe" aria-label="Globe of host cities">
+    <canvas id="globe" aria-hidden="true"></canvas>
+    <div class="globe-tip" id="globe-tip" hidden></div>
+    <div class="globe-copy">
+      <h1>Sixteen stadiums.<br>104 matches.</h1>
+      <p>Turn the globe and pick a stadium to walk inside.</p>
+      <button class="btn-brass race-btn" data-race-start>Museum Race</button>
+    </div>
+    <aside class="directory" aria-label="Stadium directory">
+      <div id="directory"></div>
+    </aside>
+    <p class="globe-hint" aria-hidden="true">Drag to turn the globe. Scroll to zoom.</p>
+  </section>
+
+  <!-- Room 2 and 3 render here -->
+  <main id="hall" tabindex="-1"></main>
+
+  <!-- The entrance -->
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    <div class="reel" id="reel" aria-hidden="true"></div>
+    <p class="reel-cap" id="reel-cap" aria-hidden="true"></p>
+    <div class="intro-inner">
+      <p class="intro-kicker">June 11 to July 19, 2026. United States, Canada and Mexico.</p>
+      <h2 id="intro-title">Full Time</h2>
+      <p class="intro-sub">Remember the summer of 2026. Every stadium, every match, every goal.</p>
+      <div class="intro-btns">
+        <button class="btn-brass" id="enter-btn">Enter the museum</button>
+        <button class="btn-ghost" data-race-start>Museum Race</button>
+      </div>
+    </div>
+  </div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <figure>
+      <img id="lb-img" alt="">
+      <figcaption><span class="hand" id="lb-cap"></span><span class="lb-meta"><span id="lb-count"></span> <a id="lb-credit" target="_blank" rel="noopener"></a></span></figcaption>
+    </figure>
+    <button class="lb-nav" id="lb-prev" aria-label="Previous photo">‹</button>
+    <button class="lb-nav" id="lb-next" aria-label="Next photo">›</button>
+    <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script type="module" src="js/museum.js"></script>
+
+</body></html>

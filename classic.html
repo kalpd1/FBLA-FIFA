@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Full Time · World Cup 2026 Rewind</title>
+  <meta name="description" content="Relive and rewrite the 2026 FIFA World Cup: timeline, what-if bracket, Monte Carlo simulator and stats.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23C79A2B'/><path d='M9 16h14' stroke='%23132036' stroke-width='3'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <a class="brand" href="./" aria-label="Full Time home">
+      <span class="brand-mark" aria-hidden="true">FT</span>
+      <span class="brand-text">Full Time<small>World Cup 2026</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main"></nav>
+    <div class="tools">
+      <label class="tool"><span class="sr" data-i="myTeam"></span>
+        <select id="myteam" aria-label="My team"></select></label>
+      <label class="tool"><span class="sr" data-i="lang"></span>
+        <select id="lang" aria-label="Language"></select></label>
+      <button class="icon-btn" id="theme" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="ribbon" id="ribbon" aria-label="Tournament timeline"></section>
+
+  <main id="main" tabindex="-1"></main>
+
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="foot">
+    <span>Built for FBLA. Match data from the openfootball project.</span>
+    <span id="source"></span>
+  </footer>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
